@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url("./assets/fonts/poppins/Poppins-Regular.eot");
+  src: url("./assets/fonts/poppins/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/poppins/Poppins-Regular.woff") format("woff"), url("./assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "yoga-filled";
+  src: url("./assets/icons/icon_fonts/yoga-filled.eot?u6fkbc");
+  src: url("./assets/icons/icon_fonts/yoga-filled.eot?u6fkbc#iefix") format("embedded-opentype"), url("./assets/icons/icon_fonts/yoga-filled.ttf?u6fkbc") format("truetype"), url("./assets/icons/icon_fonts/yoga-filled.woff?u6fkbc") format("woff"), url("./assets/icons/icon_fonts/yoga-filled.svg?u6fkbc#yoga-filled") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="yoga-"], [class*=" yoga-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "yoga-filled" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.yoga-github:before {
+  content: "";
+}
+
+.yoga-instagram:before {
+  content: "";
+}
+
+.yoga-twitter:before {
+  content: "";
+}
+
+h2 {
+  color: blue;
+}
+
+h1 {
+  color: red;
+  font-size: 50px;
+  font-weight: normal;
+  font-family: 'Poppins Regular';
+}
+
+h2 {
+  font-size: 50px;
+  color: red;
+  font-weight: normal;
+}
+/*# sourceMappingURL=main.css.map */
