@@ -1,0 +1,135 @@
+.yoga_container{
+    position: relative;
+    > .not_changed{
+        min-height: 100vh;
+        > .sidebar{
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 320px;
+            background: $primary;
+            transform: translateX(-100%);
+            z-index: 10;
+            transition: .25s ease-in-out;
+            &.active{
+                transform: translateX(0);
+            }
+            > .haader{
+                padding-top: 26px;
+                > .close {
+                    margin-left: auto;
+                    font-size: 22px;
+                    cursor: pointer;
+                }
+            }
+            > .list {
+                flex: 1 1 0%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                > li {
+                    > .circle{
+                        width: 14px;
+                        height: 14px;
+                    }
+                    > .text {
+                        font-family: 'Poppins Semibold';
+                        font-size: 36px;
+                        color: $text_color2;
+                        text-transform: uppercase;
+                        margin-left: 20px;
+                        transition: 0.25s ease-in-out;
+                        cursor: pointer;
+                        opacity: .6;
+                    }
+                    &:hover, &.active{
+                        > .text{
+                            color: $text_color;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        > .header_dots{
+            position: relative;
+            z-index: 8;
+            > .header, .dots_container{
+                position: fixed;
+                max-width: 100%;
+                left: 0;
+            }
+             > .header {
+                top: 0;
+                width: 100%;
+                height: $height_header;
+                padding: 0 3%;
+                > .burger{
+                    margin-left: auto;
+                    height: 32px;
+                    padding-top: 6px;
+                    cursor: pointer;
+                    > span {
+                        display: block;
+                        width: 36px;
+                        height: 2px;
+                        position: relative;
+                        background-color: $text_color;
+                        &:after, &:before{
+                            content: "";
+                            height: 2px;
+                            position: absolute;
+                            right: 0;
+                            background-color: $text_color;
+                        }
+                        &:after{
+                            top: 12px;
+                            width: 30px;
+                        }
+                        &:before{
+                            top: 24px;
+                            width: 36px;
+                        }
+                    }
+                }
+            }
+            > .dots_container{
+                top: 50%;
+                padding-left: 3%;
+                transform: translateY(-50%);    
+                .dots_container_inner{
+                    display: inline-flex;
+                    flex-direction: column;
+                    > .dot{
+                        cursor: pointer;
+                        > .number_name{
+                            margin-left: 10px;
+                            transition: 0.25s ease-in-out;
+                            text-transform: capitalize;
+                        }
+                        & + .dot {
+                            margin-top: 14px;
+                        }
+                        &.active{
+                            > .circle{
+                                border: 1px solid $primary;
+                            }
+                            > .number_name{
+                                color: $primary
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 990px){
+    .yoga_container > .not_changed > .header_dots > .dots_container{
+        display: none;
+    }
+}

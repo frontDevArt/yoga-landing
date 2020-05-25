@@ -1,0 +1,15 @@
+.slider_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    > * {
+        display: none;
+        min-height: 100vh;
+        &.active{
+            display: flex;
+            animation: fadeIn 1s;            
+        }
+    }
+}
+@import "./intro/intro"

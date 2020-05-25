@@ -1,13 +1,13 @@
-$icomoon-font-family: "yoga-filled" !default;
-$icomoon-font-path: "./assets/icons/icon_fonts" !default;
+$font-family: "yoga-filled" !default;
+$font-path: "./assets/icons/icon_fonts" !default;
 
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?u6fkbc');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?u6fkbc#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?u6fkbc') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?u6fkbc') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?u6fkbc##{$icomoon-font-family}') format('svg');
+  font-family: '#{$font-family}';
+  src:  url('#{$font-path}/#{$font-family}.eot?u6fkbc');
+  src:  url('#{$font-path}/#{$font-family}.eot?u6fkbc#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$font-family}.ttf?u6fkbc') format('truetype'),
+    url('#{$font-path}/#{$font-family}.woff?u6fkbc') format('woff'),
+    url('#{$font-path}/#{$font-family}.svg?u6fkbc##{$font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -15,7 +15,7 @@ $icomoon-font-path: "./assets/icons/icon_fonts" !default;
 
 [class^="yoga-"], [class*=" yoga-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
+  font-family: '#{$font-family}' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -31,6 +31,7 @@ $icomoon-font-path: "./assets/icons/icon_fonts" !default;
 $yoga-github: "\e902";
 $yoga-instagram: "\e900";
 $yoga-twitter: "\e901";
+$yoga-close: "\e903";
 
 .yoga-github {
   &:before {
@@ -47,4 +48,8 @@ $yoga-twitter: "\e901";
     content: $yoga-twitter; 
   }
 }
-
+.yoga-close {
+  &:before {
+    content: $yoga-close; 
+  }
+}

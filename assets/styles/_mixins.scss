@@ -1,0 +1,11 @@
+@mixin btn {
+    display: inline-block;    
+    background: $text_color;
+    white-space: nowrap;
+    padding: 12px 30px;
+    height: 45px;
+    color: $text_color3;
+    font-family: 'Poppins Bold';
+    text-transform: capitalize;
+    cursor: pointer;
+}
