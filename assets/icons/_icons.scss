@@ -32,6 +32,18 @@ $yoga-github: "\e902";
 $yoga-instagram: "\e900";
 $yoga-twitter: "\e901";
 $yoga-close: "\e903";
+$yoga-pencil_alt: "\e904";
+$yoga-paint_bucket: "\e905";
+$yoga-brush_alt: "\e906";
+$yoga-cup: "\e907";
+$yoga-ruler_alt_2: "\e908";
+$yoga_heart: "\e909";
+$yoga-ruler_pencil: "\e90a";
+$yoga-quote: "\e90b";
+$yoga-email: "\e90c";
+$yoga-mobile: "\e90d";
+$yoga-direction: "\e90e";
+$yoga-time: "\e90f";
 
 .yoga-github {
   &:before {
@@ -51,5 +63,65 @@ $yoga-close: "\e903";
 .yoga-close {
   &:before {
     content: $yoga-close; 
+  }
+}
+.yoga-pencil_alt {
+  &:before {
+    content: $yoga-pencil_alt; 
+  }
+}
+.yoga-paint_bucket {
+  &:before {
+    content: $yoga-paint_bucket; 
+  }
+}
+.yoga-brush_alt {
+  &:before {
+    content: $yoga-brush_alt; 
+  }
+}
+.yoga-cup {
+  &:before {
+    content: $yoga-cup; 
+  }
+}
+.yoga-ruler_alt_2 {
+  &:before {
+    content: $yoga-ruler_alt_2; 
+  }
+}
+.yoga-heart {
+  &:before {
+    content: $yoga-heart; 
+  }
+}
+.yoga-ruler_pencil {
+  &:before {
+    content: $yoga-ruler_pencil; 
+  }
+}
+.yoga-quote {
+  &:before {
+    content: $yoga-quote; 
+  }
+}
+.yoga-email {
+  &:before {
+    content: $yoga-email; 
+  }
+}
+.yoga-mobile {
+  &:before {
+    content: $yoga-mobile; 
+  }
+}
+.yoga-direction {
+  &:before {
+    content: $yoga-direction; 
+  }
+}
+.yoga-time {
+  &:before {
+    content: $yoga-time; 
   }
 }

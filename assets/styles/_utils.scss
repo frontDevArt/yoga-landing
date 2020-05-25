@@ -69,6 +69,26 @@ html {
         border-bottom: 6px solid $primary;
     }
 }
+ .circle_icon{
+    position: relative;
+    display: flex;
+    > i {
+        align-self: flex-end;
+        font-size: 30px;
+        position: relative;
+        z-index: 2;
+    }
+    > .circle_alt {
+        position: absolute;
+        top: -4px;
+        left: -10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: $primary;
+        z-index: 1;
+    }
+}
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(1.5) }
       to { opacity: 1; transform: scale(1)}

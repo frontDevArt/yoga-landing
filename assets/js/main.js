@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const close = document.querySelector('.yoga_container > .not_changed > .sidebar > .haader > .close')
     const sidebar = document.querySelector('.yoga_container > .not_changed > .sidebar')
     const overlay = document.querySelector('.overlay')
+    const serviceDotContainer = document.querySelector('.service .dots')
 
     const sliderMain = new Slider({
         dotsCountComeFrom: '.sidebar > ul.list > .slide_dot',
@@ -58,4 +59,49 @@ document.addEventListener("DOMContentLoaded", () => {
             closeSidebar()
         }
     })
+
+
+
+
+
+
+
+    function serviceSlider(){
+        const serviceSlideContainer = document.querySelector('.service > .service_slides')
+        const serviceSlideItemsList  = Array.from(serviceSlideContainer.children)
+
+        // const screenWidth = serviceSlideContainer.offsetWidth
+
+        // const serviceSlideItemsWidthSum =  serviceSlideItemsList.reduce((acc, node) => acc + node.offsetWidth, 0)
+
+        const generetedListDots = genereteDots(serviceSlideItemsList)
+
+        generetedListDots.forEach((node, index) => {
+            node.addEventListener('click', () => {
+                // 
+            })
+        })
+
+
+    }
+    function genereteDots(items) {
+        const dotsCount = items.length % 2 === 0 ? Math.floor(items.length / 5 ) : items.length % 5
+        const generetedDotsList = []
+        if(dotsCount){
+            for(let i = 0; i <=dotsCount; i++) {
+                const dot = document.createElement('div')
+                dot.className = 'dot'
+
+                const circle = document.createElement('div')
+                circle.className = 'circle'
+
+                dot.appendChild(circle)
+                serviceDotContainer.appendChild(dot)
+
+                generetedDotsList.push(dot)
+            }
+        }
+        return generetedDotsList
+    }
+    serviceSlider()
 })
