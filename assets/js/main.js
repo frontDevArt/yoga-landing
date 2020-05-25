@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.textContent = sideBarList[index].textContent
             })
             node.addEventListener('mouseout', function() {
-                this.textContent = homeLeftDotList.length < 10 ? `0${String(index + 1)}` : String(index + 1)
+                this.textContent = index + 1 < 10 ? `0${String(index + 1)}` : String(index + 1)
             })
         })
     }

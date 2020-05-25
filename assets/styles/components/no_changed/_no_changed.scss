@@ -52,6 +52,9 @@
                             opacity: 1;
                         }
                     }
+                    & + li {
+                        margin-top: 20px;
+                    }
                 }
             }
         }
