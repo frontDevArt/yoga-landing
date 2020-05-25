@@ -1,0 +1,84 @@
+.service{
+    background: no-repeat center/cover;
+    position: relative;
+    overflow: hidden;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $gradient_service;
+        pointer-events: none;
+    }
+    > .service_slides{
+        min-height: 100vh;
+        display: flex;
+        max-width: 100%;
+        // transform: translateX(-20%);
+        transition: .25s ease-in-out;
+        > .service_slide{
+            display: flex;
+            position: relative;
+            padding: 0 30px 40px;
+            width: 20%;
+            flex-shrink: 0;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                right: 0;
+                opacity: .3;
+                background-image: $gradient_service_border;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                background-color: $primary;
+                opacity: 0;
+                transition: all .6s;
+            }
+            &:hover{
+                &:after{
+                    opacity: .1;
+                }
+            }
+            > .item {
+                align-self: flex-end;
+                > .title_icon {
+                    display: flex;
+                    > .number_title{
+                        margin-left: 14px;
+                        display: flex;
+                        flex-direction: column;
+                        > strong {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                > p {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+    > .dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        > .dot {
+            & + .dot {
+                margin-left: 10px;
+            }
+        }
+    }
+}
