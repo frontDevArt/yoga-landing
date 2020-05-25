@@ -1,14 +1,7 @@
+@import "./variables";
+@import "./reseter";
+@import "./mixins";
+@import "./utils";
 @import "../fonts/fonts";
 @import "../icons/icons";
-@import "components/navbar";
-h1 {
-  color: red;
-  font-size: 50px;
-  font-weight: normal;
-  font-family: 'Poppins Regular';
-}
-h2 {
-  font-size: 50px;
-  color: red;
-  font-weight: normal;
-}
+@import "./components/components";
