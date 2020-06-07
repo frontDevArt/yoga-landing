@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const close = document.querySelector('.yoga_container > .not_changed > .sidebar > .haader > .close')
     const sidebar = document.querySelector('.yoga_container > .not_changed > .sidebar')
     const overlay = document.querySelector('.overlay')
-    const serviceDotContainer = document.querySelector('.service .dots')
 
     const sliderMain = new Slider({
         dotsCountComeFrom: '.sidebar > ul.list > .slide_dot',
@@ -59,49 +58,33 @@ document.addEventListener("DOMContentLoaded", () => {
             closeSidebar()
         }
     })
-
-
-
-
-
-
-
-    function serviceSlider(){
-        const serviceSlideContainer = document.querySelector('.service > .service_slides')
-        const serviceSlideItemsList  = Array.from(serviceSlideContainer.children)
-
-        // const screenWidth = serviceSlideContainer.offsetWidth
-
-        // const serviceSlideItemsWidthSum =  serviceSlideItemsList.reduce((acc, node) => acc + node.offsetWidth, 0)
-
-        const generetedListDots = genereteDots(serviceSlideItemsList)
-
-        generetedListDots.forEach((node, index) => {
-            node.addEventListener('click', () => {
-                // 
-            })
-        })
-
-
-    }
-    function genereteDots(items) {
-        const dotsCount = items.length % 2 === 0 ? Math.floor(items.length / 5 ) : items.length % 5
-        const generetedDotsList = []
-        if(dotsCount){
-            for(let i = 0; i <=dotsCount; i++) {
-                const dot = document.createElement('div')
-                dot.className = 'dot'
-
-                const circle = document.createElement('div')
-                circle.className = 'circle'
-
-                dot.appendChild(circle)
-                serviceDotContainer.appendChild(dot)
-
-                generetedDotsList.push(dot)
+    
+    const swiper = new Swiper('.swiper-container', {
+        observer: true,
+        observeParents: true,
+        spaceBetween: 0,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+            320: {
+              slidesPerView: 1,
+              slidesPerGroup: 1
+            },
+            600: {
+                slidesPerView: 2,
+                slidesPerGroup: 2
+            },
+            790: {
+              slidesPerView: 3,
+              slidesPerGroup: 3
+            },
+            990: {
+              slidesPerView: 5,
+              slidesPerGroup: 5,
+              spaceBetween: 0
             }
-        }
-        return generetedDotsList
-    }
-    serviceSlider()
+          }
+      });
 })

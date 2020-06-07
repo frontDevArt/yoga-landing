@@ -12,18 +12,15 @@
         background: $gradient_service;
         pointer-events: none;
     }
-    > .service_slides{
-        min-height: 100vh;
+    .service_slides{
         display: flex;
-        max-width: 100%;
-        // transform: translateX(-20%);
+        align-items: baseline;
+        min-height: 100vh;
         transition: .25s ease-in-out;
         > .service_slide{
             display: flex;
             position: relative;
             padding: 0 30px 40px;
-            width: 20%;
-            flex-shrink: 0;
             &:before{
                 content: "";
                 position: absolute;
@@ -52,33 +49,34 @@
             }
             > .item {
                 align-self: flex-end;
+                padding-bottom: 20px;
+                min-height: 160px;
                 > .title_icon {
                     display: flex;
                     > .number_title{
-                        margin-left: 14px;
+                        margin-left: 20px;
                         display: flex;
                         flex-direction: column;
+                        > span {
+                            opacity: .5;
+                        }
                         > strong {
                             margin-top: 10px;
+                            text-transform: capitalize;
+                            font-family: 'Poppins Bold';
                         }
                     }
                 }
                 > p {
-                    margin-top: 14px;
+                    margin-top: 20px;
+                    opacity: .5;
+                    line-height: 1.8;
                 }
             }
         }
     }
-    > .dots {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        > .dot {
-            & + .dot {
-                margin-left: 10px;
-            }
-        }
-    }
+}
+.swiper-pagination-bullet-active{
+    background: transparent;
+    border: 1px solid $primary;
 }
