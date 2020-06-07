@@ -36,13 +36,14 @@ html {
     display: flex;
     align-items: center;
 }
-.circle{
+.circle, .swiper-pagination-bullet{
     $width_height: 10px;
     width: $width_height;
     height: $width_height;
     border: 1px solid $text_color;
     border-radius: 50%;
     transition: 0.25s ease-in-out;
+    opacity: 1;
 }
  .footer{
     margin-top: auto;
