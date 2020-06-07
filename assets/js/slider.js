@@ -11,6 +11,7 @@ class Slider {
         if(options.canUseSliderDots && options.canUseSliderDots.length){
             this.canUseSliderDots = options.canUseSliderDots
         }
+        this.dotIndex = null
 
     }
     generateDots() {
@@ -49,6 +50,13 @@ class Slider {
             nodes[0].classList.add('active')
             nodes.forEach((node, index) => {
                 node.addEventListener('click', () => {
+                    if(Array.from(document.querySelectorAll(this.canUseSliderDots)).length){
+                        this.dotIndex = index
+                        Array.from(document.querySelectorAll(this.canUseSliderDots)).forEach(node => node.classList.remove('active'))
+                        Array.from(document.querySelectorAll(this.canUseSliderDots))[this.dotIndex].classList.add('active')
+                        Array.from(listofGeneretedDots).forEach(node => node.classList.remove('active'))
+                        listofGeneretedDots[this.dotIndex].classList.add('active')
+                    }
                     nodes.forEach(node => node.classList.remove('active'))
                     node.classList.add('active')
                     this.addClass(index)
