@@ -10,15 +10,6 @@ $font-path-poppins: "./assets/fonts/poppins" !default;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Poppins Bold';
-    src: url('#{$font-path-poppins}/Poppins-Bold.eot');
-    src: url('#{$font-path-poppins}/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
-    url('#{$font-path-poppins}/Poppins-Bold.woff') format('woff'),
-    url('#{$font-path-poppins}/Poppins-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Poppins Semibold';
     src: url('#{$font-path-poppins}/Poppins-SemiBold.eot');
     src: url('#{$font-path-poppins}/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
@@ -26,4 +17,13 @@ $font-path-poppins: "./assets/fonts/poppins" !default;
     url('#{$font-path-poppins}/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    }
+    @font-face {
+        font-family: 'Poppins Bold';
+        src: url('#{$font-path-poppins}/Poppins-Bold.eot');
+        src: url('#{$font-path-poppins}/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path-poppins}/Poppins-Bold.woff') format('woff'),
+        url('#{$font-path-poppins}/Poppins-Bold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }

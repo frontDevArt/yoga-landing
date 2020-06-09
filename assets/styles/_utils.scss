@@ -8,7 +8,6 @@
 html {
     color: $text_color;
     font-family: 'Poppins Regular';
-    background: #ccc;
     font-size: 14px;
 }
 .overlay {
@@ -43,6 +42,7 @@ html {
     border: 1px solid $text_color;
     border-radius: 50%;
     transition: 0.25s ease-in-out;
+    outline: none;
     opacity: 1;
 }
  .footer{
