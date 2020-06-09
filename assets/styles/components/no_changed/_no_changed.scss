@@ -81,7 +81,7 @@
                     background: $navbar_gradient;
                     pointer-events: none;
                     opacity: .6;
-                    z-index: 6;
+                    z-index: -1;
 
                 }
                 > .burger{

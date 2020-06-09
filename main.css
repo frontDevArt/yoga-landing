@@ -433,7 +433,7 @@ html {
   background: linear-gradient(180deg, #151812, transparent);
   pointer-events: none;
   opacity: .6;
-  z-index: 6;
+  z-index: -1;
 }
 
 .yoga_container > .not_changed > .header_dots > .header > .burger {
