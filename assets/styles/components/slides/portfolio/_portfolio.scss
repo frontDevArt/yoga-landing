@@ -1,0 +1,31 @@
+.portfolio {
+    background: $gradient_portfolio;
+    > .portfolio_inner{
+        padding: 120px 15px;
+        width: 80vw;
+        margin: 0 auto;
+        > .body {
+            margin-top: 50px;
+            > .filter_buttons{
+                display: flex;
+                justify-content: center;
+                overflow-y: hidden;
+                overflow-x: auto;
+                > button {
+                    font-family: 'Poppins Semibold';
+                    font-size: 12px;
+                    padding: 7px 15px;
+                    text-transform: capitalize;
+                    opacity: .6;
+                    cursor: pointer;
+                    &.active {
+                        background: $primary;
+                    }
+                    & + button {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
