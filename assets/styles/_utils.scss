@@ -134,19 +134,41 @@ html {
 .container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 0 -30px;
     > .item {
+        position: relative;
         margin: 15px;
         width: calc(100% / 12 * 3 - 30px);
         height: 212px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        overflow: hidden;
         @media screen and (max-width: 760px) {
             width: calc(100% / 12 * 6 - 30px);            
         }
         @media screen and (max-width: 460px) {
             width: calc(100% - 30px);            
+        }
+        > .overlay {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-100%);
+            background: rgba($primary, .6);
+            transition: .25s ease-in-out;
+            > span {
+                font-family: 'Poppins Semibold';
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        }
+        &:hover{
+            > .overlay {
+                transform: translateY(0);
+            }
         }
     }
 }
