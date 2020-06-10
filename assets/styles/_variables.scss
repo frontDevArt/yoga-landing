@@ -1,11 +1,12 @@
-$width_wrapper: 96vw;
 $height_header: 84px;
 
 $text_color: #ffffff;
 $text_color2: #eeeeee;
 $text_color3: #333333;
-$primary: #e90041;
+$primary: rgb(233, 0, 65);
 $about_black: #151812;
-$gradient_service: linear-gradient(180deg,transparent 27%,#151812 87%);
+
+$gradient_service: linear-gradient(180deg,transparent 27%,$about_black 87%);
 $gradient_service_border: linear-gradient(180deg,transparent,$text_color);
-$navbar_gradient: linear-gradient(180deg,#151812,transparent);
+$navbar_gradient: linear-gradient(180deg,$about_black,transparent);
+$gradient_portfolio: linear-gradient(270deg,$primary,transparent 70%);

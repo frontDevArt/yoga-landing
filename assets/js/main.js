@@ -88,3 +88,22 @@ document.addEventListener("DOMContentLoaded", () => {
           }
       });
 })
+
+const buttons = document.querySelectorAll('.portfolio .filter_buttons > button')
+const items = document.querySelectorAll('.portfolio .container > .item')
+
+
+buttons.forEach(node => {
+    node.addEventListener('click', function() {
+        buttons.forEach(node => node.classList.remove('active'))
+        this.classList.add('active')
+        const target = this.getAttribute('data-target')
+        console.log(node)
+        items.forEach(node => {
+            node.style.display = 'none'
+            if(node.getAttribute('data-id') === target || target === 'all'){
+                node.style.display = 'block'
+            }
+        })
+    })
+})
