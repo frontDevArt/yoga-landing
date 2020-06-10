@@ -69,6 +69,32 @@ ul {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -178,32 +204,6 @@ html {
   border-radius: 50%;
   background: #e90041;
   z-index: 1;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
 }
 
 @font-face {
