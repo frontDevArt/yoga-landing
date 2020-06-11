@@ -11,6 +11,9 @@ html {
     font-family: 'Poppins Regular';
     font-size: 14px;
 }
+body{
+    overflow-x: hidden;
+}
 .overlay {
     position: fixed; 
     display: none;
