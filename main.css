@@ -111,6 +111,10 @@ html {
   font-size: 14px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .overlay {
   position: fixed;
   display: none;
@@ -667,7 +671,7 @@ html {
 
 .intro > .pictures {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .intro > .pictures > .intro_slides {
